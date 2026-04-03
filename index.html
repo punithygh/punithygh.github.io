@@ -1,290 +1,191 @@
 <!DOCTYPE html>
-<html lang="kn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ನಮ್ಮ ತುಮಕೂರು ಡೈರೆಕ್ಟರಿ | Namma Tumkur Directory</title>
+    <title>TumkurBricks | Rent & Buy Properties in Tumkur</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-        header { background-color: #ff6600; color: white; padding: 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .container { max-width: 800px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { color: #333; border-bottom: 2px solid #ff6600; padding-bottom: 5px; margin-top: 30px; font-size: 22px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f5f7; margin: 0; padding: 0; }
         
-        .card { background: #fafafa; border: 1px solid #ddd; padding: 15px; margin-bottom: 25px; border-radius: 8px; overflow: hidden; transition: transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .card:hover { transform: scale(1.02); border-color: #ff6600; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
-        .card h3 { margin-top: 10px; color: #0056b3; margin-bottom: 5px; font-size: 18px; }
-        .card p { margin: 5px 0; color: #444; font-size: 14px; }
+        /* Navbar Design */
+        .navbar { background-color: #d8232a; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .navbar .logo { font-size: 24px; font-weight: bold; letter-spacing: 1px; }
+        .navbar .post-btn { background-color: white; color: #d8232a; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px; }
         
-        .pg-image { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 10px; background-color: #eee; }
+        /* Hero Search Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80') center/cover; padding: 60px 20px; text-align: center; color: white; }
+        .hero h1 { margin-top: 0; font-size: 32px; }
+        .hero p { font-size: 16px; margin-bottom: 30px; }
         
-        .badge-boys { background-color: #007bff; color: white; padding: 4px 10px; font-size: 12px; border-radius: 4px; float: right; font-weight: bold; }
-        .badge-girls { background-color: #e83e8c; color: white; padding: 4px 10px; font-size: 12px; border-radius: 4px; float: right; font-weight: bold; }
+        .search-box { background: white; max-width: 700px; margin: 0 auto; padding: 10px; border-radius: 8px; display: flex; gap: 10px; flex-wrap: wrap;}
+        .search-box select, .search-box input { padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 15px; flex: 1; min-width: 150px; outline: none; }
+        .search-box button { background-color: #d8232a; color: white; border: none; padding: 12px 25px; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; }
+        .search-box button:hover { background-color: #b01c22; }
+
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 15px; }
+        .section-title { color: #333; font-size: 22px; margin-bottom: 20px; border-bottom: 2px solid #d8232a; display: inline-block; padding-bottom: 5px; }
+
+        /* Property Cards (MagicBricks Style) */
+        .property-card { background: white; border-radius: 8px; overflow: hidden; display: flex; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); border: 1px solid #eaeaea; transition: 0.3s; }
+        .property-card:hover { box-shadow: 0 5px 20px rgba(0,0,0,0.15); transform: translateY(-3px); }
         
-        .action-buttons { margin-top: 15px; display: flex; gap: 10px; }
-        .btn { padding: 10px 15px; text-decoration: none; color: white; border-radius: 5px; font-weight: bold; font-size: 14px; text-align: center; flex: 1; display: flex; justify-content: center; align-items: center;}
-        .btn-call { background-color: #28a745; }
-        .btn-map { background-color: #17a2b8; }
-        .btn:hover { opacity: 0.8; }
+        .img-section { width: 300px; position: relative; }
+        .img-section img { width: 100%; height: 100%; object-fit: cover; }
+        .tag { position: absolute; top: 10px; left: 10px; background: #28a745; color: white; padding: 4px 8px; font-size: 12px; font-weight: bold; border-radius: 4px; }
+        
+        .details-section { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+        .price { font-size: 24px; font-weight: bold; color: #333; margin: 0 0 5px 0; }
+        .title { font-size: 18px; color: #111; margin: 0 0 10px 0; }
+        .location { color: #666; font-size: 14px; margin-bottom: 15px; display: flex; align-items: center; gap: 5px; }
+        
+        .amenities { display: flex; gap: 15px; background: #f9f9f9; padding: 10px; border-radius: 5px; margin-bottom: 15px; flex-wrap: wrap;}
+        .amenity-item { font-size: 13px; color: #555; display: flex; flex-direction: column; align-items: center; gap: 3px; border-right: 1px solid #ddd; padding-right: 15px; }
+        .amenity-item:last-child { border-right: none; }
+        .amenity-val { font-weight: bold; color: #222; font-size: 14px;}
+        
+        .desc { font-size: 14px; color: #555; line-height: 1.5; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        
+        .action-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid #eee; padding-top: 15px; }
+        .owner-info { font-size: 13px; color: #666; }
+        .owner-info span { font-weight: bold; color: #333; }
+        
+        .contact-btn { background-color: #d8232a; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; font-size: 14px; transition: 0.2s; }
+        .contact-btn:hover { background-color: #b01c22; }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .property-card { flex-direction: column; }
+            .img-section { width: 100%; height: 200px; }
+            .amenities { justify-content: space-between; }
+            .amenity-item { border-right: none; padding-right: 0; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1 style="margin: 0;">ನಮ್ಮ ತುಮಕೂರು ಡೈರೆಕ್ಟರಿ</h1>
-    <p style="margin: 5px 0 0 0; font-size: 14px;">ತುಮಕೂರಿನ ಟಾಪ್ ರೇಟೆಡ್ ಪಿಜಿಗಳು ಮತ್ತು ಪ್ರವಾಸಿ ತಾಣಗಳ ಸಂಪೂರ್ಣ ಮಾಹಿತಿ</p>
-</header>
+<div class="navbar">
+    <div class="logo">TumkurBricks</div>
+    <a href="#" class="post-btn">+ Post Property (Free)</a>
+</div>
+
+<div class="hero">
+    <h1>Find Your Dream Home in Tumkur</h1>
+    <p>Search from 500+ Flats, Independent Houses, and PGs</p>
+    
+    <div class="search-box">
+        <select id="propertyType">
+            <option value="Rent">For Rent</option>
+            <option value="Buy">For Sale</option>
+            <option value="PG">PG / Hostels</option>
+        </select>
+        <input type="text" id="locality" placeholder="Enter Locality (e.g. SIT Extension, Kuvempunagar)" onkeyup="filterProperties()">
+        <button onclick="filterProperties()">Search</button>
+    </div>
+</div>
 
 <div class="container">
+    <h2 class="section-title">Recommended Properties</h2>
     
-    <h2>ಹುಡುಗರ ಪಿಜಿಗಳು (Top 10 Boys PGs)</h2>
-
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="Sharan PG" class="pg-image">
-        <h3>1. ಶರಣ್ ಮೆನ್ಸ್ ಪಿಜಿ (Sharan Mens PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಸಿರಾ ರಸ್ತೆ, ಲಿಂಗಾಪುರ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.4 / 5 (135+ Reviews)</p>
-        <p><strong>ರಿವ್ಯೂ:</strong> "ವಿಶಾಲವಾದ ರೂಮ್‌ಗಳು ಮತ್ತು ಅತ್ಯುತ್ತಮ ಊಟದ ವ್ಯವಸ್ಥೆ ಇದೆ."</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sharan+Mens+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+    <div id="propertyList">
+        
+        <div class="property-card item">
+            <div class="img-section">
+                <span class="tag">For Rent</span>
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="House">
+            </div>
+            <div class="details-section">
+                <h3 class="price">₹ 12,000 / month</h3>
+                <h4 class="title" class="prop-title">2 BHK Independent House</h4>
+                <div class="location" class="prop-loc">📍 SIT Extension, Tumkur</div>
+                
+                <div class="amenities">
+                    <div class="amenity-item">Furnishing <span class="amenity-val">Semi-Furnished</span></div>
+                    <div class="amenity-item">Tenant <span class="amenity-val">Family Only</span></div>
+                    <div class="amenity-item">Area <span class="amenity-val">1200 sqft</span></div>
+                    <div class="amenity-item">Parking <span class="amenity-val">1 Car, 2 Bikes</span></div>
+                </div>
+                
+                <p class="desc">Beautiful 2 BHK house with 24/7 water supply, good ventilation, modular kitchen, and very close to SIT college main gate.</p>
+                
+                <div class="action-footer">
+                    <div class="owner-info">Owner: <span>Ramesh Gowda</span> <br> Posted: Today</div>
+                    <a href="tel:+910000000000" class="contact-btn">Contact Owner</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1522771731478-44eb10e5c776?auto=format&fit=crop&w=800&q=80" alt="Nisarga PG" class="pg-image">
-        <h3>2. ನಿಸರ್ಗ ಬಾಯ್ಸ್ ಹಾಸ್ಟೆಲ್ (Nisarga Boys Hostel)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಎಸ್.ಎಸ್ ಪುರಂ ಮುಖ್ಯ ರಸ್ತೆ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <p><strong>ರಿವ್ಯೂ:</strong> "ತುಮಕೂರಿನ ಅತ್ಯುತ್ತಮ ಪಿಜಿಗಳಲ್ಲಿ ಒಂದು, ಸ್ವಚ್ಛತೆಗೆ ಮೊದಲ ಆದ್ಯತೆ."</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Nisarga+Boys+Hostel+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        <div class="property-card item">
+            <div class="img-section">
+                <span class="tag" style="background-color: #007bff;">PG for Girls</span>
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=600&q=80" alt="Room">
+            </div>
+            <div class="details-section">
+                <h3 class="price">₹ 5,000 / month</h3>
+                <h4 class="title" class="prop-title">Sri Vishnu Girls PG (2 Sharing)</h4>
+                <div class="location" class="prop-loc">📍 9th Cross, SIT Ext, Tumkur</div>
+                
+                <div class="amenities">
+                    <div class="amenity-item">Food <span class="amenity-val">Included (3 times)</span></div>
+                    <div class="amenity-item">WiFi <span class="amenity-val">Free High Speed</span></div>
+                    <div class="amenity-item">Security <span class="amenity-val">CCTV & Guard</span></div>
+                </div>
+                
+                <p class="desc">Safe and hygienic paying guest accommodation for girls and working women. Attach bathroom and washing machine available.</p>
+                
+                <div class="action-footer">
+                    <div class="owner-info">Owner: <span>Lakshmi</span> <br> Posted: 2 days ago</div>
+                    <a href="tel:+910000000000" class="contact-btn">Contact Owner</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1502672260266-1c1de2d9d000?auto=format&fit=crop&w=800&q=80" alt="Harshitha PG" class="pg-image">
-        <h3>3. ಹರ್ಷಿತಾ ಬಾಯ್ಸ್ ಪಿಜಿ (Harshitha Boys PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು ನಗರ</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Harshitha+Boys+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        <div class="property-card item">
+            <div class="img-section">
+                <span class="tag" style="background-color: #ff9900;">For Sale</span>
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="Villa">
+            </div>
+            <div class="details-section">
+                <h3 class="price">₹ 65 Lacs</h3>
+                <h4 class="title" class="prop-title">30x40 Newly Built 3 BHK Villa</h4>
+                <div class="location" class="prop-loc">📍 Kuvempunagar, Tumkur</div>
+                
+                <div class="amenities">
+                    <div class="amenity-item">Facing <span class="amenity-val">East Facing</span></div>
+                    <div class="amenity-item">Approval <span class="amenity-val">TUDA Approved</span></div>
+                    <div class="amenity-item">Area <span class="amenity-val">1200 sqft</span></div>
+                </div>
+                
+                <p class="desc">A brand new luxurious 3 BHK duplex house ready to move. Features premium vitrified tiles, teak wood doors, and modern elevation.</p>
+                
+                <div class="action-footer">
+                    <div class="owner-info">Agent: <span>Tumkur Properties</span> <br> Posted: 1 week ago</div>
+                    <a href="tel:+910000000000" class="contact-btn">Contact Agent</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Manjunatha PG" class="pg-image">
-        <h3>4. ಮಂಜುನಾಥ ಬಾಯ್ಸ್ ಪಿಜಿ (Manjunatha PG For Boys)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Manjunatha+PG+For+Boys+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
     </div>
-
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Gowreeshawara PG" class="pg-image">
-        <h3>5. ಗೌರೀಶ್ವರ ಪೇಯಿಂಗ್ ಗೆಸ್ಟ್ (Gowreeshawara PG Hostel)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಗಂಗೋತ್ರಿ ರಸ್ತೆ, 1ನೇ ಕ್ರಾಸ್, ಎಸ್‌ಐಟಿ ಎಕ್ಸ್‌ಟೆನ್ಶನ್, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Gowreeshawara+Paying+Guest+Hostel+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-    
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Swagath PG" class="pg-image">
-        <h3>6. ಸ್ವಾಗತ್ ಪೇಯಿಂಗ್ ಗೆಸ್ಟ್ (Swagath Paying Guest)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Swagath+Paying+Guest+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Omkar PG" class="pg-image">
-        <h3>7. ಓಂಕಾರ ಬಾಯ್ಸ್ ಹಾಸ್ಟೆಲ್ (Omkar Boys Hostel)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಬಿ.ಹೆಚ್ ರಸ್ತೆ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.1 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Omkar+Boys+Hostel+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1595526114101-11b088e5b412?auto=format&fit=crop&w=800&q=80" alt="SVK PG" class="pg-image">
-        <h3>8. ಎಸ್‌ವಿಕೆ ಮೆನ್ಸ್ ಪಿಜಿ (SVK Mens PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> 8ನೇ ಕ್ರಾಸ್, ಎಸ್‌ಐಟಿ ಎಕ್ಸ್‌ಟೆನ್ಶನ್, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.3 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=SVK+Mens+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="Raghavendra PG" class="pg-image">
-        <h3>9. ರಾಘವೇಂದ್ರ ಮೆನ್ಸ್ ಪಿಜಿ (Raghavendra Mens PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಸರಸ್ವತಿಪುರಂ, ತುಮಕೂರು - 572105</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 3.7 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Raghavendra+Mens+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-boys">Boys PG</span>
-        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80" alt="Vivekananda PG" class="pg-image">
-        <h3>10. ವಿವೇಕಾನಂದ ಬಾಯ್ಸ್ ಪಿಜಿ (Vivekananda Boys PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ವಿದ್ಯಾನಗರ ಮುಖ್ಯ ರಸ್ತೆ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Vivekananda+Boys+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <h2 style="margin-top: 40px;">ಹುಡುಗಿಯರ ಪಿಜಿಗಳು (Top 10 Girls PGs)</h2>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=800&q=80" alt="Sri Vishnu Girls PG" class="pg-image">
-        <h3>1. ಶ್ರೀ ವಿಷ್ಣು ಗರ್ಲ್ಸ್ ಪಿಜಿ (Sri Vishnu Girls PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> 9ನೇ ಕ್ರಾಸ್, ಎಸ್‌ಐಟಿ ಎಕ್ಸ್‌ಟೆನ್ಶನ್, ತುಮಕೂರು - 572103</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.5 / 5 (45+ Reviews)</p>
-        <p><strong>ರಿವ್ಯೂ:</strong> "ಸುರಕ್ಷಿತ ಮತ್ತು ಸ್ವಚ್ಛವಾದ ವಾತಾವರಣ, ಮಹಿಳೆಯರಿಗೆ ಉತ್ತಮ ಆಯ್ಕೆ."</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sri+Vishnu+Girls+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1499916078039-922301b0eb9b?auto=format&fit=crop&w=800&q=80" alt="Shree Vishnu Priya Girls PG" class="pg-image">
-        <h3>2. ಶ್ರೀ ವಿಷ್ಣು ಪ್ರಿಯಾ ಗರ್ಲ್ಸ್ ಪಿಜಿ (Shree Vishnu Priya PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಎಸ್.ಎಸ್ ಪುರಂ (ನಮ್ಮೂರ ಆಹಾರ ಹತ್ತಿರ), ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Shree+Vishnu+Priya+Girls+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1518733057094-95b53143d2a7?auto=format&fit=crop&w=800&q=80" alt="Vasavi Ladies PG" class="pg-image">
-        <h3>3. ವಾಸವಿ ಲೇಡೀಸ್ ಪಿಜಿ (Vasavi Ladies Pg)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು ನಗರ</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <p><strong>ರಿವ್ಯೂ:</strong> "ಬೆಳಕು ಮತ್ತು ಗಾಳಿಯಿರುವ ಸ್ವಚ್ಛವಾದ ರೂಮ್‌ಗಳು, ಕಡಿಮೆ ಬಜೆಟ್‌ನಲ್ಲಿ ಬೆಸ್ಟ್."</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Vasavi+Ladies+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1595526051245-4506e0005bd0?auto=format&fit=crop&w=800&q=80" alt="Abhay Girls PG" class="pg-image">
-        <h3>4. ಅಭಯ್ ಗರ್ಲ್ಸ್ ಪಿಜಿ (Abhay Girls Pg)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Abhay+Girls+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80" alt="Sharada Ladies PG" class="pg-image">
-        <h3>5. ಶಾರದಾ ಲೇಡೀಸ್ ಪಿಜಿ (Sharada Ladies PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sharada+Ladies+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80" alt="Sri Bhaghavathi Ladies PG" class="pg-image">
-        <h3>6. ಶ್ರೀ ಭಗವತಿ ಲೇಡೀಸ್ ಪಿಜಿ (Sri Bhaghavathi Ladies PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sri+Bhaghavathi+Ladies+Paying+Guest+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="Ambika Paying Guest" class="pg-image">
-        <h3>7. ಅಂಬಿಕಾ ಲೇಡೀಸ್ ಪಿಜಿ (Ambika Paying Guest)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು ನಗರ</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Ambika+Paying+Guest+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=800&q=80" alt="Hi Fi Girls PG" class="pg-image">
-        <h3>8. ಹೈ-ಫೈ ಗರ್ಲ್ಸ್ ಪಿಜಿ (Hi Fi Girls Pg)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ವಿವೇಕಾನಂದ ರಸ್ತೆ / ಶ್ರೀ ಕೃಷ್ಣ ನಗರ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.5 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Hi+Fi+Girls+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="SLN Ladies PG" class="pg-image">
-        <h3>9. ಎಸ್‌ಎಲ್‌ಎನ್ ಲೇಡೀಸ್ ಪಿಜಿ (SLN Ladies PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> 1ನೇ ಮೇನ್, ಅಶೋಕ್ ನಗರ, ತುಮಕೂರು - 572104</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 3.8 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=SLN+Ladies+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <span class="badge-girls">Girls PG</span>
-        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Manasa Ladies Home" class="pg-image">
-        <h3>10. ಮಾನಸ ಲೇಡೀಸ್ ಹೋಮ್ (Manasa Ladies Home)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಎಸ್.ಎಸ್ ಪುರಂ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.2 / 5</p>
-        <div class="action-buttons">
-            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Manasa+Ladies+Home+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
-        </div>
-    </div>
-
 </div>
+
+<script>
+    // Live Search Function
+    function filterProperties() {
+        let input = document.getElementById('locality').value.toLowerCase();
+        let typeFilter = document.getElementById('propertyType').value.toLowerCase();
+        let items = document.getElementsByClassName('item');
+        
+        for (let i = 0; i < items.length; i++) {
+            let text = items[i].innerText.toLowerCase();
+            
+            // Checking if the card contains both the typed text AND the selected type (Rent/Sale/PG)
+            if (text.includes(input) && text.includes(typeFilter.replace('buy', 'sale'))) {
+                items[i].style.display = "flex";
+            } else {
+                items[i].style.display = "none";
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
