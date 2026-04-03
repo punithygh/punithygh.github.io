@@ -6,130 +6,282 @@
     <title>ನಮ್ಮ ತುಮಕೂರು ಡೈರೆಕ್ಟರಿ | Namma Tumkur Directory</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-        header { background-color: #ff6600; color: white; padding: 20px; text-align: center; }
+        header { background-color: #ff6600; color: white; padding: 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .container { max-width: 800px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { color: #333; border-bottom: 2px solid #ff6600; padding-bottom: 5px; margin-top: 30px; }
-        .card { background: #fafafa; border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; transition: transform 0.2s; }
-        .card:hover { transform: scale(1.02); border-color: #ff6600; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .card h3 { margin-top: 0; color: #0056b3; margin-bottom: 5px; }
+        h2 { color: #333; border-bottom: 2px solid #ff6600; padding-bottom: 5px; margin-top: 30px; font-size: 22px; }
+        
+        .card { background: #fafafa; border: 1px solid #ddd; padding: 15px; margin-bottom: 25px; border-radius: 8px; overflow: hidden; transition: transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card:hover { transform: scale(1.02); border-color: #ff6600; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .card h3 { margin-top: 10px; color: #0056b3; margin-bottom: 5px; font-size: 18px; }
         .card p { margin: 5px 0; color: #444; font-size: 14px; }
-        .badge-boys { background-color: #007bff; color: white; padding: 3px 8px; font-size: 12px; border-radius: 4px; float: right; }
-        .badge-girls { background-color: #e83e8c; color: white; padding: 3px 8px; font-size: 12px; border-radius: 4px; float: right; }
+        
+        .pg-image { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 10px; background-color: #eee; }
+        
+        .badge-boys { background-color: #007bff; color: white; padding: 4px 10px; font-size: 12px; border-radius: 4px; float: right; font-weight: bold; }
+        .badge-girls { background-color: #e83e8c; color: white; padding: 4px 10px; font-size: 12px; border-radius: 4px; float: right; font-weight: bold; }
+        
+        .action-buttons { margin-top: 15px; display: flex; gap: 10px; }
+        .btn { padding: 10px 15px; text-decoration: none; color: white; border-radius: 5px; font-weight: bold; font-size: 14px; text-align: center; flex: 1; display: flex; justify-content: center; align-items: center;}
+        .btn-call { background-color: #28a745; }
+        .btn-map { background-color: #17a2b8; }
+        .btn:hover { opacity: 0.8; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>ನಮ್ಮ ತುಮಕೂರು ಡೈರೆಕ್ಟರಿ</h1>
-    <p>ತುಮಕೂರಿನ ಬೆಸ್ಟ್ ಪಿಜಿಗಳು, ರೂಮ್ಸ್ ಮತ್ತು ಪ್ರವಾಸಿ ತಾಣಗಳ ಸಂಪೂರ್ಣ ಮಾಹಿತಿ</p>
+    <h1 style="margin: 0;">ನಮ್ಮ ತುಮಕೂರು ಡೈರೆಕ್ಟರಿ</h1>
+    <p style="margin: 5px 0 0 0; font-size: 14px;">ತುಮಕೂರಿನ ಟಾಪ್ ರೇಟೆಡ್ ಪಿಜಿಗಳು ಮತ್ತು ಪ್ರವಾಸಿ ತಾಣಗಳ ಸಂಪೂರ್ಣ ಮಾಹಿತಿ</p>
 </header>
 
 <div class="container">
     
-    <h2>ಹುಡುಗರ ಪಿಜಿಗಳು (Top 10 Boys PGs in Tumkur)</h2>
+    <h2>ಹುಡುಗರ ಪಿಜಿಗಳು (Top 10 Boys PGs)</h2>
 
-    <div class="card"><span class="badge-boys">Boys PG</span>
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="Sharan PG" class="pg-image">
         <h3>1. ಶರಣ್ ಮೆನ್ಸ್ ಪಿಜಿ (Sharan Mens PG)</h3>
         <p><strong>ವಿಳಾಸ:</strong> ಸಿರಾ ರಸ್ತೆ, ಲಿಂಗಾಪುರ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.4 / 5</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.4 / 5 (135+ Reviews)</p>
+        <p><strong>ರಿವ್ಯೂ:</strong> "ವಿಶಾಲವಾದ ರೂಮ್‌ಗಳು ಮತ್ತು ಅತ್ಯುತ್ತಮ ಊಟದ ವ್ಯವಸ್ಥೆ ಇದೆ."</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sharan+Mens+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-boys">Boys PG</span>
-        <h3>2. ಗೌರೀಶ್ವರ ಪೇಯಿಂಗ್ ಗೆಸ್ಟ್ (Gowreeshawara PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಗಂಗೋತ್ರಿ ರಸ್ತೆ, 1ನೇ ಕ್ರಾಸ್, ಎಸ್‌ಐಟಿ ಎಕ್ಸ್‌ಟೆನ್ಶನ್, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 3.9 / 5</p>
-    </div>
-    <div class="card"><span class="badge-boys">Boys PG</span>
-        <h3>3. ನಿಸರ್ಗ ಬಾಯ್ಸ್ ಹಾಸ್ಟೆಲ್ (Nisarga Boys Hostel)</h3>
+
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1522771731478-44eb10e5c776?auto=format&fit=crop&w=800&q=80" alt="Nisarga PG" class="pg-image">
+        <h3>2. ನಿಸರ್ಗ ಬಾಯ್ಸ್ ಹಾಸ್ಟೆಲ್ (Nisarga Boys Hostel)</h3>
         <p><strong>ವಿಳಾಸ:</strong> ಎಸ್.ಎಸ್ ಪುರಂ ಮುಖ್ಯ ರಸ್ತೆ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.2 / 5</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <p><strong>ರಿವ್ಯೂ:</strong> "ತುಮಕೂರಿನ ಅತ್ಯುತ್ತಮ ಪಿಜಿಗಳಲ್ಲಿ ಒಂದು, ಸ್ವಚ್ಛತೆಗೆ ಮೊದಲ ಆದ್ಯತೆ."</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Nisarga+Boys+Hostel+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-boys">Boys PG</span>
-        <h3>4. ಶ್ರೀ ಸಿದ್ದಗಂಗಾ ಬಾಯ್ಸ್ ಪಿಜಿ (Sri Siddaganga Boys PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಕ್ಯಾತ್ಸಂದ್ರ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.5 / 5</p>
+
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1de2d9d000?auto=format&fit=crop&w=800&q=80" alt="Harshitha PG" class="pg-image">
+        <h3>3. ಹರ್ಷಿತಾ ಬಾಯ್ಸ್ ಪಿಜಿ (Harshitha Boys PG)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು ನಗರ</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Harshitha+Boys+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-boys">Boys PG</span>
-        <h3>5. ಬಾಲಾಜಿ ಮೆನ್ಸ್ ಪಿಜಿ (Balaji Mens PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಬಟವಾಡಿ (Batawadi), ತುಮಕೂರು - 572103</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.0 / 5</p>
+
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Manjunatha PG" class="pg-image">
+        <h3>4. ಮಂಜುನಾಥ ಬಾಯ್ಸ್ ಪಿಜಿ (Manjunatha PG For Boys)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Manjunatha+PG+For+Boys+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-boys">Boys PG</span>
-        <h3>6. ಶ್ರೀ ಸಾಯಿ ರಾಮ್ ಮೆನ್ಸ್ ಪಿಜಿ (Sri Sai Ram Mens PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಅಶೋಕ್ ನಗರ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 3.8 / 5</p>
+
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Gowreeshawara PG" class="pg-image">
+        <h3>5. ಗೌರೀಶ್ವರ ಪೇಯಿಂಗ್ ಗೆಸ್ಟ್ (Gowreeshawara PG Hostel)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ಗಂಗೋತ್ರಿ ರಸ್ತೆ, 1ನೇ ಕ್ರಾಸ್, ಎಸ್‌ಐಟಿ ಎಕ್ಸ್‌ಟೆನ್ಶನ್, ತುಮಕೂರು</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Gowreeshawara+Paying+Guest+Hostel+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-boys">Boys PG</span>
+    
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Swagath PG" class="pg-image">
+        <h3>6. ಸ್ವಾಗತ್ ಪೇಯಿಂಗ್ ಗೆಸ್ಟ್ (Swagath Paying Guest)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Swagath+Paying+Guest+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Omkar PG" class="pg-image">
         <h3>7. ಓಂಕಾರ ಬಾಯ್ಸ್ ಹಾಸ್ಟೆಲ್ (Omkar Boys Hostel)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು ಯೂನಿವರ್ಸಿಟಿ ಹತ್ತಿರ, ಬಿ.ಹೆಚ್ ರಸ್ತೆ, ತುಮಕೂರು</p>
+        <p><strong>ವಿಳಾಸ:</strong> ಬಿ.ಹೆಚ್ ರಸ್ತೆ, ತುಮಕೂರು</p>
         <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.1 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Omkar+Boys+Hostel+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-boys">Boys PG</span>
+
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1595526114101-11b088e5b412?auto=format&fit=crop&w=800&q=80" alt="SVK PG" class="pg-image">
         <h3>8. ಎಸ್‌ವಿಕೆ ಮೆನ್ಸ್ ಪಿಜಿ (SVK Mens PG)</h3>
         <p><strong>ವಿಳಾಸ:</strong> 8ನೇ ಕ್ರಾಸ್, ಎಸ್‌ಐಟಿ ಎಕ್ಸ್‌ಟೆನ್ಶನ್, ತುಮಕೂರು</p>
         <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.3 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=SVK+Mens+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-boys">Boys PG</span>
+
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="Raghavendra PG" class="pg-image">
         <h3>9. ರಾಘವೇಂದ್ರ ಮೆನ್ಸ್ ಪಿಜಿ (Raghavendra Mens PG)</h3>
         <p><strong>ವಿಳಾಸ:</strong> ಸರಸ್ವತಿಪುರಂ, ತುಮಕೂರು - 572105</p>
         <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 3.7 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Raghavendra+Mens+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-boys">Boys PG</span>
+
+    <div class="card">
+        <span class="badge-boys">Boys PG</span>
+        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80" alt="Vivekananda PG" class="pg-image">
         <h3>10. ವಿವೇಕಾನಂದ ಬಾಯ್ಸ್ ಪಿಜಿ (Vivekananda Boys PG)</h3>
         <p><strong>ವಿಳಾಸ:</strong> ವಿದ್ಯಾನಗರ ಮುಖ್ಯ ರಸ್ತೆ, ತುಮಕೂರು</p>
         <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Vivekananda+Boys+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
 
-    <h2>ಹುಡುಗಿಯರ ಪಿಜಿಗಳು (Top 10 Girls PGs in Tumkur)</h2>
+    <h2 style="margin-top: 40px;">ಹುಡುಗಿಯರ ಪಿಜಿಗಳು (Top 10 Girls PGs)</h2>
 
-    <div class="card"><span class="badge-girls">Girls PG</span>
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=800&q=80" alt="Sri Vishnu Girls PG" class="pg-image">
         <h3>1. ಶ್ರೀ ವಿಷ್ಣು ಗರ್ಲ್ಸ್ ಪಿಜಿ (Sri Vishnu Girls PG)</h3>
         <p><strong>ವಿಳಾಸ:</strong> 9ನೇ ಕ್ರಾಸ್, ಎಸ್‌ಐಟಿ ಎಕ್ಸ್‌ಟೆನ್ಶನ್, ತುಮಕೂರು - 572103</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.5 / 5</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.5 / 5 (45+ Reviews)</p>
+        <p><strong>ರಿವ್ಯೂ:</strong> "ಸುರಕ್ಷಿತ ಮತ್ತು ಸ್ವಚ್ಛವಾದ ವಾತಾವರಣ, ಮಹಿಳೆಯರಿಗೆ ಉತ್ತಮ ಆಯ್ಕೆ."</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sri+Vishnu+Girls+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-girls">Girls PG</span>
-        <h3>2. ಎಸ್‌ಎಲ್‌ಎನ್ ಲೇಡೀಸ್ ಪಿಜಿ (SLN Ladies PG)</h3>
+
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1499916078039-922301b0eb9b?auto=format&fit=crop&w=800&q=80" alt="Shree Vishnu Priya Girls PG" class="pg-image">
+        <h3>2. ಶ್ರೀ ವಿಷ್ಣು ಪ್ರಿಯಾ ಗರ್ಲ್ಸ್ ಪಿಜಿ (Shree Vishnu Priya PG)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ಎಸ್.ಎಸ್ ಪುರಂ (ನಮ್ಮೂರ ಆಹಾರ ಹತ್ತಿರ), ತುಮಕೂರು</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Shree+Vishnu+Priya+Girls+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1518733057094-95b53143d2a7?auto=format&fit=crop&w=800&q=80" alt="Vasavi Ladies PG" class="pg-image">
+        <h3>3. ವಾಸವಿ ಲೇಡೀಸ್ ಪಿಜಿ (Vasavi Ladies Pg)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು ನಗರ</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <p><strong>ರಿವ್ಯೂ:</strong> "ಬೆಳಕು ಮತ್ತು ಗಾಳಿಯಿರುವ ಸ್ವಚ್ಛವಾದ ರೂಮ್‌ಗಳು, ಕಡಿಮೆ ಬಜೆಟ್‌ನಲ್ಲಿ ಬೆಸ್ಟ್."</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Vasavi+Ladies+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1595526051245-4506e0005bd0?auto=format&fit=crop&w=800&q=80" alt="Abhay Girls PG" class="pg-image">
+        <h3>4. ಅಭಯ್ ಗರ್ಲ್ಸ್ ಪಿಜಿ (Abhay Girls Pg)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Abhay+Girls+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80" alt="Sharada Ladies PG" class="pg-image">
+        <h3>5. ಶಾರದಾ ಲೇಡೀಸ್ ಪಿಜಿ (Sharada Ladies PG)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sharada+Ladies+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80" alt="Sri Bhaghavathi Ladies PG" class="pg-image">
+        <h3>6. ಶ್ರೀ ಭಗವತಿ ಲೇಡೀಸ್ ಪಿಜಿ (Sri Bhaghavathi Ladies PG)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sri+Bhaghavathi+Ladies+Paying+Guest+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="Ambika Paying Guest" class="pg-image">
+        <h3>7. ಅಂಬಿಕಾ ಲೇಡೀಸ್ ಪಿಜಿ (Ambika Paying Guest)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ತುಮಕೂರು ನಗರ</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 5.0 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Ambika+Paying+Guest+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=800&q=80" alt="Hi Fi Girls PG" class="pg-image">
+        <h3>8. ಹೈ-ಫೈ ಗರ್ಲ್ಸ್ ಪಿಜಿ (Hi Fi Girls Pg)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ವಿವೇಕಾನಂದ ರಸ್ತೆ / ಶ್ರೀ ಕೃಷ್ಣ ನಗರ, ತುಮಕೂರು</p>
+        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.5 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hi+Fi+Girls+Pg+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="SLN Ladies PG" class="pg-image">
+        <h3>9. ಎಸ್‌ಎಲ್‌ಎನ್ ಲೇಡೀಸ್ ಪಿಜಿ (SLN Ladies PG)</h3>
         <p><strong>ವಿಳಾಸ:</strong> 1ನೇ ಮೇನ್, ಅಶೋಕ್ ನಗರ, ತುಮಕೂರು - 572104</p>
         <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 3.8 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=SLN+Ladies+PG+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
-    <div class="card"><span class="badge-girls">Girls PG</span>
-        <h3>3. ಮಾನಸ ಲೇಡೀಸ್ ಹೋಮ್ (Manasa Ladies Home)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಎಸ್.ಎಸ್ ಪುರಂ, ಪೊಲೀಸ್ ಸ್ಟೇಷನ್ ಹತ್ತಿರ, ತುಮಕೂರು</p>
+
+    <div class="card">
+        <span class="badge-girls">Girls PG</span>
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Manasa Ladies Home" class="pg-image">
+        <h3>10. ಮಾನಸ ಲೇಡೀಸ್ ಹೋಮ್ (Manasa Ladies Home)</h3>
+        <p><strong>ವಿಳಾಸ:</strong> ಎಸ್.ಎಸ್ ಪುರಂ, ತುಮಕೂರು</p>
         <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.2 / 5</p>
-    </div>
-    <div class="card"><span class="badge-girls">Girls PG</span>
-        <h3>4. ಹೈ-ಫೈ ಗರ್ಲ್ಸ್ ಪಿಜಿ (Hi Fi Girls PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ವಿವೇಕಾನಂದ ರಸ್ತೆ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.1 / 5</p>
-    </div>
-    <div class="card"><span class="badge-girls">Girls PG</span>
-        <h3>5. ಅಕ್ಷತಾ ಲೇಡೀಸ್ ಹಾಸ್ಟೆಲ್ (Akshata Ladies Hostel)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಕುವೆಂಪುನಗರ, ತುಮಕೂರು - 572102</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.0 / 5</p>
-    </div>
-    <div class="card"><span class="badge-girls">Girls PG</span>
-        <h3>6. ಶ್ರೀ ಲಕ್ಷ್ಮಿ ಗರ್ಲ್ಸ್ ಪಿಜಿ (Sri Lakshmi Girls PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಬಟವಾಡಿ ಬಸ್ ಸ್ಟಾಪ್ ಹತ್ತಿರ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 3.9 / 5</p>
-    </div>
-    <div class="card"><span class="badge-girls">Girls PG</span>
-        <h3>7. ನಿವೇದಿತಾ ಲೇಡೀಸ್ ಪಿಜಿ (Nivedita Ladies PG)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಗುಬ್ಬಿ ಗೇಟ್ ಹತ್ತಿರ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.3 / 5</p>
-    </div>
-    <div class="card"><span class="badge-girls">Girls PG</span>
-        <h3>8. ಸ್ಪೂರ್ತಿ ಗರ್ಲ್ಸ್ ಹಾಸ್ಟೆಲ್ (Spoorthi Girls Hostel)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಶಿರಾನಾಗ (Shiranaga) ಲೇಔಟ್, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 3.7 / 5</p>
-    </div>
-    <div class="card"><span class="badge-girls">Girls PG</span>
-        <h3>9. ಭವಾನಿ ಲೇಡೀಸ್ ಹೋಮ್ (Bhavani Ladies Home)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಎಸ್‌ಐಟಿ ಬ್ಯಾಕ್ ಗೇಟ್, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.4 / 5</p>
-    </div>
-    <div class="card"><span class="badge-girls">Girls PG</span>
-        <h3>10. ಮೀನಾಕ್ಷಿ ಗರ್ಲ್ಸ್ ಹಾಸ್ಟೆಲ್ (Meenakshi Girls Hostel)</h3>
-        <p><strong>ವಿಳಾಸ:</strong> ಕ್ಯಾತ್ಸಂದ್ರ, ಸಿದ್ದಗಂಗಾ ಮಠದ ರಸ್ತೆ, ತುಮಕೂರು</p>
-        <p><strong>ರೇಟಿಂಗ್:</strong> ⭐ 4.2 / 5</p>
+        <div class="action-buttons">
+            <a href="tel:+910000000000" class="btn btn-call">📞 ಕಾಲ್ ಮಾಡಿ</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Manasa+Ladies+Home+Tumkur" target="_blank" class="btn btn-map">📍 ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ನೋಡಿ</a>
+        </div>
     </div>
 
 </div>
